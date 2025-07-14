@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Ingeniería Civil en Obras Civiles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Malla Ingeniería Civil en Obras Civiles</h1>
+  <div class="malla">
+
+    <!-- Semestres -->
+    <div class="semestre">
+      <div class="materia general" id="AyG">Álgebra y Geometría (7 Cr)</div>
+      <div class="materia general" id="C1">Cálculo I (7 Cr)</div>
+      <div class="materia general" id="Qui">Química (6 Cr)</div>
+      <div class="materia ciencias" id="Progra">Programación (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="Comunicación">Comunicación para la Ingeniería (5 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia general" id="AL">Álgebra Lineal (6 Cr)</div>
+      <div class="materia general" id="C2">Cálculo II (6 Cr)</div>
+      <div class="materia general" id="Meca">Mecánica (7 Cr)</div>
+      <div class="materia ciencias" id="Ingenieria">Ingeniería de Materiales (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="CFG1">Minor/CFG (5 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia general" id="EDO">Ecuaciones Diferenciales (6 Cr)</div>
+      <div class="materia general" id="C3">Cálculo III (6 Cr)</div>
+      <div class="materia general" id="CyO">Calor y Ondas (7 Cr)</div>
+      <div class="materia ciencias" id="Estatica">Estática (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="CFG2">Minor/CFG 2 (5 Cr)</div>
+      <div class="materia interdisciplinaria" id="I1">Inglés I (5 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia ciencias" id="Proba">Probabilidades y Estadísticas (6 Cr)</div>
+      <div class="materia ciencias" id="MecaFluidos">Mecánica de Fluidos (6 Cr)</div>
+      <div class="materia general" id="Electro">Electricidad y Magnetismo (7 Cr)</div>
+      <div class="materia ciencias" id="MecaSolidos">Mecánica de Sólidos (6 Cr)</div>
+      <div class="materia aplicada" id="Edificacion">Edificación (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="I2">Inglés II (5 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia ciencias" id="Opti">Optimización (6 Cr)</div>
+      <div class="materia aplicada" id="Hidraulica">Hidráulica (6 Cr)</div>
+      <div class="materia aplicada" id="Topo">Topografía (6 Cr)</div>
+      <div class="materia ciencias" id="AE">Análisis Estructural (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="CFG3">Minor/CFG 3 (5 Cr)</div>
+      <div class="materia interdisciplinaria" id="I3">Inglés III (5 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia ciencias" id="IntroEconomia">Introducción a la Economía (6 Cr)</div>
+      <div class="materia aplicada" id="IngeAmbiental">Ingeniería Ambiental (6 Cr)</div>
+      <div class="materia aplicada" id="TecnoHormigon">Tecnología del Hormigón (6 Cr)</div>
+      <div class="materia ciencias" id="DE">Diseño Estructural (6 Cr)</div>
+      <div class="materia ciencias" id="Seminario">Seminario Cs. Ingeniería (6 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia practica" id="Practica1">Práctica I (7 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia aplicada" id="MecaSuelos">Mecánica de Suelos (6 Cr)</div>
+      <div class="materia aplicada" id="Hidrologia">Hidrología (6 Cr)</div>
+      <div class="materia aplicada" id="Admi">Administración Proyectos Civiles (6 Cr)</div>
+      <div class="materia aplicada" id="DH">Diseño en Hormigón (6 Cr)</div>
+      <div class="materia interdisciplinaria" id="CFG4">Minor/CFG 4 (5 Cr)</div>
+    </div>
+    <div class="licenciado practica">
+      Licenciado en Ciencias de la Ingeniería
+    </div>
+    <div class="semestre">
+      <div class="materia aplicada" id="Funda">Fundaciones (6 Cr)</div>
+      <div class="materia aplicada" id="HidraulicaU">Hidráulica Urbana (6 Cr)</div>
+      <div class="materia aplicada" id="PlaniProyectos">Planificación de Proyectos (6 Cr)</div>
+      <div class="materia aplicada" id="DA">Diseño en Acero (6 Cr)</div>
+      <div class="materia aplicada" id="IngeSismica">Ingeniería Sísmica (6 Cr)</div>
+      <div class="materia practica" id="Practica2">Práctica II (7 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia aplicada" id="BIM">BIM (6 Cr)</div>
+      <div class="materia aplicada" id="IngeCostos">Ingeniería de Costos (6 Cr)</div>
+      <div class="materia aplicada" id="E1">Electivo Profesional (6 Cr)</div>
+      <div class="materia aplicada" id="E2">Electivo Profesional (6 Cr)</div>
+      <div class="materia aplicada" id="E3">Electivo Profesional (6 Cr)</div>
+    </div>
+    <div class="semestre">
+      <div class="materia aplicada" id="TallerProyectos">Taller de Proyectos (7 Cr)</div>
+      <div class="materia aplicada" id="DC">Diseño de Caminos (6 Cr)</div>
+      <div class="materia aplicada" id="E4">Electivo Profesional (6 Cr)</div>
+      <div class="materia aplicada" id="E5">Electivo Profesional (6 Cr)</div>
+      <div class="materia aplicada" id="E6">Electivo Profesional (6 Cr)</div>
+    </div>
+    <div class="titulo practica">
+      Actividad de Titulación - Ingeniero Civil en Obras Civiles (30 Cr)
+    </div>
+    <div class="egreso hidden" id="egreso">
+      🎊 ¡Egreso! 🎓
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
