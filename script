@@ -1,0 +1,84 @@
+// Definir los prerrequisitos
+const prerequisitos = {
+  AL: ["AyG"],
+  C2: ["C1"],
+  Meca: ["C1"],
+  Ingenieria: ["Qui"],
+  EDO: ["AL", "C2"],
+  C3: ["C2"],
+  CyO: ["C2", "Meca"],
+  Estatica: ["C2", "Meca"],
+  Proba: ["C2"],
+  MecaFluidos: ["Estatica"],
+  Electro: ["EDO", "C3"],
+  MecaSolidos: ["Estatica"],
+  Edificacion: ["Ingenieria"],
+  I2: ["I1"],
+  Opti: ["AL", "C3"],
+  Hidraulica: ["MecaFluidos"],
+  Topo: ["Edificacion"],
+  AE: ["MecaSolidos"],
+  I3: ["I2"],
+  IntroEconomia: ["C3"],
+  TecnoHormigon: ["Proba", "Edificacion"],
+  DE: ["MecaSolidos"],
+  Practica1: ["Hidraulica", "AE", "TecnoHormigon"],
+  MecaSuelos: ["MecaFluidos", "AE"],
+  Hidrologia: ["Proba", "Hidraulica"],
+  Admi: ["Edificacion", "IntroEconomia"],
+  DH: ["DE"],
+  Funda: ["MecaSuelos"],
+  HidraulicaU: ["Hidrologia"],
+  PlaniProyectos: ["Admi"],
+  DA: ["DE"],
+  IngeSismica: ["DH"],
+  Practica2: ["Seminario"],
+  BIM: ["DH", "HidraulicaU"],
+  IngeCostos: ["PlaniProyectos"],
+  TallerProyectos: ["BIM"],
+  DC: ["MecaSuelos", "DH"]
+};
+
+const aprobadas = new Set();
+
+function toggle(materia) {
+  const div = document.getElementById(materia);
+  if (div.classList.contains("bloqueada")) return;
+
+  if (div.classList.contains("aprobada")) {
+    div.classList.remove("aprobada");
+    aprobadas.delete(materia);
+  } else {
+    div.classList.add("aprobada");
+    aprobadas.add(materia);
+  }
+  actualizarMalla();
+}
+
+function actualizarMalla() {
+  for (let mat in prerequisitos) {
+    const div = document.getElementById(mat);
+    const reqs = prerequisitos[mat];
+    const habilitado = reqs.every(r => aprobadas.has(r));
+    if (habilitado) {
+      div.classList.remove("bloqueada");
+    } else {
+      div.classList.add("bloqueada");
+      div.classList.remove("aprobada");
+      aprobadas.delete(mat);
+    }
+  }
+
+  // Mostrar egreso si todo está aprobado
+  if (document.querySelectorAll('.materia:not(.aprobada)').length === 0) {
+    document.getElementById("egreso").classList.remove("hidden");
+  } else {
+    document.getElementById("egreso").classList.add("hidden");
+  }
+}
+
+// Inicializar
+document.querySelectorAll('.materia').forEach(div => {
+  div.addEventListener("click", () => toggle(div.id));
+});
+actualizarMalla();
